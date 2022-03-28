@@ -83,12 +83,6 @@ pDATA<-ggplot()+
   ditch_the_axes
 pDATA
 
-g1 = ggplot() + geom_sf(data = merged_data, aes(fill = Percentage)) +
-  scale_x_continuous(breaks = c(170, 175))+
-  theme_bw() +
-  ditch_the_axes
-g1
-
 ## Visualisasi rata-rata biaya internet by province
 internet_cost <- read_dta("biaya internet.dta")
 
