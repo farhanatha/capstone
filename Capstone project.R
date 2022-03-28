@@ -97,9 +97,6 @@ cost_province <- aggregate(x = internet_cost$sebulan,    # Specify data column
           FUN = mean)                           # Specify function (i.e. mean)
 
 # Rename variable province
-cost_province$Group.1 <- as.character(cost_province$Group.1)
-cost_province$Group.1[cost_province$Group.1==11]<-"Aceh"
-
 merged_data1 <- geo_join(spatial_data=map2, 
                         data_frame=cost_province, by_sp="ADM1_EN", 
                         by_df="Group.1", how = "inner")
